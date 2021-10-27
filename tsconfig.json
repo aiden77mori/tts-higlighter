@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "ESNext",
+    "lib": ["ES2015", "DOM"],
+    "moduleResolution": "Node",
+    "strict": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "jsx": "react",
+    "outDir": "./dist/esm",
+    "isolatedModules": true,
+    "declaration": true
+  },
+  "include": ["./src"]
+}

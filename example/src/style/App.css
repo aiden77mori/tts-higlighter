@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background-color: #ffffff;
+  color: #fff;
+}
+
+.App {
+  flex-direction: column;
+}
+
+.sidebar {
+  overflow: auto;
+  color: rgb(119, 119, 119);
+  background: linear-gradient(rgb(249, 248, 247),
+      rgb(251, 250, 248) 46px,
+      rgb(251, 251, 249) 120px,
+      rgb(248, 247, 245) 35%,
+      rgb(249, 248, 246));
+}
+
+.sidebar__highlights {
+  list-style: "none";
+  padding: 0;
+}
+
+.highlight__location {
+  margin-top: 0.5rem;
+  text-align: right;
+  font-size: 10px;
+}
+
+.highlight__image {
+  overflow: auto;
+  max-width: 300px;
+  border: 1px dashed;
+}
+
+.sidebar__highlight {
+  padding: 1rem;
+  cursor: pointer;
+  transition: background 140ms ease-in;
+  border-bottom: 1px solid rgb(119, 119, 119);
+}
+
+.sidebar__highlight:hover {
+  background: rgba(58, 56, 52, 0.08);
+}
+
+a {
+  color: #d35400;
+}
+
+blockquote {
+  padding: 0;
+  margin: 0;
+  quotes: "\201c""\201d";
+}
+
+blockquote:before {
+  content: open-quote;
+}
+
+blockquote:after {
+  content: close-quote;
+}
+
+.topbar {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  z-index: 9999;
+  background-color: #0c5372;
+  ;
+  padding: 10px;
+  justify-content: space-around;
+  opacity: .92;
+}
+
+.btn-active {
+  background-color: #1a4a93;
+  color: white;
+  border: 1px solid white;
+}
+
+.topbar input {
+  width: 50px;
+  border-radius: 10px;
+  padding-left: 5px;
+}
+
+.topbar select {
+  width: 70px;
+  border-radius: 10px;
+}
+
+.topbar button {
+  width: 70px;
+  border-radius: 10px;
+}
+
+.topbar .text-group input {
+  width: 300px;
+  background: white;
+}
+
+.topbar .button-group,
+.select-group,
+.text-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.button-group {
+  width: 25%;
+}
+
+.select-group {
+  width: 40%;
+}
+
+.text-group {
+  width: 35%;
+}
+
+.pdf-content {
+  display: flex;
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .topbar {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .topbar {
+    flex-direction: column;
+    /* width: 100%; */
+    align-items: center;
+  }
+
+  .pdf-content {
+    margin-top: 120px;
+  }
+
+  .topbar .button-group,
+  .select-group,
+  .text-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 97%;
+    text-align: center;
+    padding: 5px;
+  }
+}
